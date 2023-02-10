@@ -24,9 +24,7 @@ public class Main {
         System.out.println();
         int[] fiveDifferentNumbers = {5, 9, 45, 96, 126};
         System.out.print("Enter a number: ");
-        //Scanner scanner = new Scanner(System.in);
         int box = scanner.nextInt();
-       // scanner.close();
         Arrays.sort(fiveDifferentNumbers);
         if (Arrays.binarySearch(fiveDifferentNumbers, box) >= 0) {
             System.out.println("The number exists");
@@ -46,9 +44,7 @@ public class Main {
         System.out.println();
         int[] fiveDifferentNumbers = {6, 8, 85, 63, 45};
         System.out.print("Enter a number: ");
-        //Scanner scanner = new Scanner(System.in);
         int box = scanner.nextInt();
-        //scanner.close();
         Arrays.sort(fiveDifferentNumbers);
         if (Arrays.binarySearch(fiveDifferentNumbers, box) < 0) {
             System.out.println("The number dose not exists");
@@ -76,7 +72,6 @@ public class Main {
         System.out.println("Run task two:");
         System.out.println();
         System.out.print("Enter the array length: ");
-        //Scanner scanner = new Scanner(System.in);
         int[] array = new int[scanner.nextInt()];
         scanner.close();
         Random randomNumberForArray = new Random();
