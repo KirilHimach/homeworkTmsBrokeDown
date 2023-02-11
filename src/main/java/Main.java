@@ -1,7 +1,5 @@
 import java.math.BigInteger;
-import java.util.Arrays;
-import java.util.Random;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
 
@@ -44,14 +42,14 @@ public class Main {
         System.out.println();
         int[] fiveDifferentNumbers = {6, 8, 85, 63, 45};
         System.out.print("Enter a number: ");
-        int box = scanner.nextInt();
+        int key = scanner.nextInt();
         Arrays.sort(fiveDifferentNumbers);
-        if (Arrays.binarySearch(fiveDifferentNumbers, box) < 0) {
+        if (Arrays.binarySearch(fiveDifferentNumbers, key) < 0) {
             System.out.println("The number dose not exists");
         } else {
             int[] arrayBox = new int[fiveDifferentNumbers.length];
             for (int i = 0; i < fiveDifferentNumbers.length; i++) {
-                if (fiveDifferentNumbers[i] != box) {
+                if (fiveDifferentNumbers[i] != key) {
                     arrayBox[i] = fiveDifferentNumbers[i];
                 }
             }
@@ -85,6 +83,7 @@ public class Main {
         for (int i : array) {
             averageValueFromArray = averageValueFromArray.add(BigInteger.valueOf(i));
         }
+        averageValueFromArray = averageValueFromArray.divide(BigInteger.valueOf(array.length));
         System.out.println("Min value = " + minNumberFromArray);
         System.out.println("Average value = " + averageValueFromArray);
         System.out.println("Max value = " + maxNumberFromArray);
@@ -112,6 +111,8 @@ public class Main {
             countArrayOne += arrayOne[i];
             countArrayTwo += arrayTwo[i];
         }
+        countArrayOne /= arrayOne.length;
+        countArrayTwo /= arrayTwo.length;
         if (countArrayOne == countArrayTwo) {
             System.out.println("Array one = array two");
         } else if (countArrayOne > countArrayTwo) {
