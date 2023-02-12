@@ -10,6 +10,7 @@ public class Main {
         runTaskOne();
         runTaskTwo();
         runTaskThree();
+        scanner.close();
     }
 
     /*
@@ -71,7 +72,6 @@ public class Main {
         System.out.println();
         System.out.print("Enter the array length: ");
         int[] array = new int[scanner.nextInt()];
-        scanner.close();
         Random randomNumberForArray = new Random();
         for (int i = 0; i < array.length; i++) {
             array[i] = randomNumberForArray.nextInt();
