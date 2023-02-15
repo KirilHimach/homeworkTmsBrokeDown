@@ -44,11 +44,15 @@ public class Main {
         int[] fiveDifferentNumbers = {6, 8, 85, 63, 45};
         System.out.print("Enter a number: ");
         int key = scanner.nextInt();
+        int count = 0;
         Arrays.sort(fiveDifferentNumbers);
         if (Arrays.binarySearch(fiveDifferentNumbers, key) < 0) {
             System.out.println("The number dose not exists");
         } else {
-            int[] arrayBox = new int[fiveDifferentNumbers.length];
+            for (int i : fiveDifferentNumbers) {
+                if (i == key) count++;
+            }
+            int[] arrayBox = new int[fiveDifferentNumbers.length - count];
             for (int i = 0; i < fiveDifferentNumbers.length; i++) {
                 if (fiveDifferentNumbers[i] != key) {
                     arrayBox[i] = fiveDifferentNumbers[i];
