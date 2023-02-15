@@ -45,24 +45,21 @@ public class Main {
         System.out.print("Enter a number: ");
         int key = scanner.nextInt();
         int count = 0;
-        Arrays.sort(fiveDifferentNumbers);
-        if (Arrays.binarySearch(fiveDifferentNumbers, key) < 0) {
-            System.out.println("The number dose not exists");
-        } else {
             for (int i : fiveDifferentNumbers) {
                 if (i == key) count++;
             }
-            int[] arrayBox = new int[fiveDifferentNumbers.length - count];
-            int arrayBoxLength = 0;
-            for (int i = 0; i < fiveDifferentNumbers.length; i++) {
-                if (fiveDifferentNumbers[i] != key && arrayBoxLength < arrayBox.length) {
-                    arrayBox[arrayBoxLength] = fiveDifferentNumbers[i];
-                    arrayBoxLength++;
+            if (count != 0) {
+                int[] arrayBox = new int[fiveDifferentNumbers.length - count];
+                int arrayBoxLength = 0;
+                for (int i = 0; i < fiveDifferentNumbers.length; i++) {
+                    if (fiveDifferentNumbers[i] != key && arrayBoxLength < arrayBox.length) {
+                        arrayBox[arrayBoxLength] = fiveDifferentNumbers[i];
+                        arrayBoxLength++;
+                    }
                 }
-            }
-            System.out.print("The new array: ");
-            System.out.println(Arrays.toString(arrayBox));
-        }
+                System.out.print("The new array: ");
+                System.out.println(Arrays.toString(arrayBox));
+            } else System.out.println("The number dose not exists");
         System.out.println("                   -----------------------                  ");
     }
 
