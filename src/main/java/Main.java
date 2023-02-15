@@ -55,19 +55,10 @@ B W B W B W B W
     private static void createChessBoard() {
         System.out.println("Run task two");
         System.out.println();
-        String whiteColour = "W";
-        String blackColour = "B";
         String[][] chessBoard = new String[8][8];
         for (int i = 0; i < chessBoard.length; i++) {
-            String box;
-            if ((i % 2) == 0) {
-                box = whiteColour;
-            } else box = blackColour;
             for (int j = 0; j < chessBoard[i].length; j++) {
-                chessBoard[i][j] = box;
-                if (box.equals(whiteColour)) {
-                    box = blackColour;
-                } else box = whiteColour;
+                chessBoard[i][j] = ((i % 2) == 0) ? (((j % 2) == 0) ? "W" : "B") : (((j % 2) == 0) ? "B" : "W");
             }
         }
         for (int i = 0; i < chessBoard.length; i++) {
