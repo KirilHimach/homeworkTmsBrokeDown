@@ -41,7 +41,7 @@ public class Main {
     private static void runTaskOne() {
         System.out.println("Run task one:");
         System.out.println();
-        int[] fiveDifferentNumbers = {6, 8, 85, 63, 45};
+        int[] fiveDifferentNumbers = {6, 8, 6, 63, 45};
         System.out.print("Enter a number: ");
         int key = scanner.nextInt();
         int count = 0;
@@ -53,9 +53,11 @@ public class Main {
                 if (i == key) count++;
             }
             int[] arrayBox = new int[fiveDifferentNumbers.length - count];
+            int arrayBoxLength = 0;
             for (int i = 0; i < fiveDifferentNumbers.length; i++) {
-                if (fiveDifferentNumbers[i] != key) {
-                    arrayBox[i] = fiveDifferentNumbers[i];
+                if (fiveDifferentNumbers[i] != key && arrayBoxLength < arrayBox.length) {
+                    arrayBox[arrayBoxLength] = fiveDifferentNumbers[i];
+                    arrayBoxLength++;
                 }
             }
             System.out.print("The new array: ");
