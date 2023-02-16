@@ -1,3 +1,4 @@
+import homeworkSix.ATMMachine;
 import homeworkSix.CreditCard;
 
 public class Main {
@@ -11,5 +12,12 @@ public class Main {
         System.out.println(card1);
         System.out.println(card2);
         System.out.println(card3);
+        System.out.println();
+        System.out.println();
+
+        ATMMachine machine = new ATMMachine(5, 5, 6);
+        machine.addCash(22, 12, 6);
+
+
     }
 }

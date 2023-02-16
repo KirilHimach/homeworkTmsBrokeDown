@@ -13,9 +13,9 @@ public class CreditCard {
         this.accountAmount += accountAmount;
     }
 
-  public void withdrawAccountAmount(int accountAmount) {
+    public void withdrawAccountAmount(int accountAmount) {
         this.accountAmount -= accountAmount;
-  }
+    }
 
     @Override
     public String toString() {
