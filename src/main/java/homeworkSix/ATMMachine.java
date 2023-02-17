@@ -50,12 +50,12 @@ public class ATMMachine {
             System.out.println("Take your money!");
             System.out.printf("You have received %d $20 bills, %d $50 bills, " +
                     "%d $100 bills.\n", issueCash[0], issueCash[1], issueCash[2]);
-            correctCashATM();
+            changeBalanceATM();
             return true;
         } else return false;
     }
 
-    private void correctCashATM() {
+    private void changeBalanceATM() {
       twentyBill -= issueCash[0];
       fiftyBill -= issueCash[1];
       oneHundredBill -= issueCash[2];
