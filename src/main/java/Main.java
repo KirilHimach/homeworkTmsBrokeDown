@@ -1,4 +1,5 @@
 import homeworkSix.ATMMachine;
+import homeworkSix.Computer;
 import homeworkSix.CreditCard;
 
 public class Main {
@@ -17,20 +18,21 @@ public class Main {
 
         ATMMachine machine = new ATMMachine(1, 3, 1);
         machine.addCash(100, 1, 0);
-        System.out.println("Cash now - " + machine.sumCashATMMachine());
         machine.withdrawCash(520);
         System.out.println();
-        System.out.println("Cash now - " + machine.sumCashATMMachine());
         machine.withdrawCash(-20);
         System.out.println();
-        System.out.println("Cash now - " + machine.sumCashATMMachine());
         machine.withdrawCash(70);
         System.out.println();
-        System.out.println("Cash now - " + machine.sumCashATMMachine());
         machine.withdrawCash(6_000_000);
         System.out.println();
-        System.out.println("Cash now - " + machine.sumCashATMMachine());
         System.out.println("                     ---------------------------------------");
 
+        Computer computer1 = new Computer(1530, "Rocket");
+        Computer computer2 = new Computer(9999, "IronBoss",
+                new Computer.RAM("DDR", 55),
+                new Computer.HDD("NorthDigital", 45, true));
+        System.out.println(computer1);
+        System.out.println(computer2);
     }
 }

@@ -23,11 +23,15 @@ public class ATMMachine {
         this.twentyBill += twentyBill;
         this.fiftyBill += fiftyBill;
         this.oneHundredBill += oneHundredBill;
+        System.out.println("The operation was completed successfully.");
+        System.out.printf("The ATM machine has %d$ now.\n", sumCashATMMachine());
+        System.out.println();
     }
 
     public boolean withdrawCash(int cash) {
         if (mathWithdrawCash(cash)) {
-            System.out.println("The operation was completed successfully");
+            System.out.println("The operation was completed successfully.");
+            System.out.printf("The ATM machine has %d$ now.\n", sumCashATMMachine());
             return true;
         } else {
             System.out.println("Operation failed");
@@ -83,7 +87,7 @@ public class ATMMachine {
         return true;
     }
 
-    public int sumCashATMMachine() {
+    private int sumCashATMMachine() {
         return (twentyBill * 20) + (fiftyBill * 50) + (oneHundredBill * 100);
     }
 }
