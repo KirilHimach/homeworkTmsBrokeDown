@@ -13,8 +13,11 @@ public class CreditCard {
         this.accountAmount += accountAmount;
     }
 
-    public void withdrawAccountAmount(int accountAmount) {
-        this.accountAmount -= accountAmount;
+    public void withdrawCash(int accountAmount) {
+        if ((this.accountAmount - accountAmount) >= -1000) {
+            this.accountAmount -= accountAmount;
+        } else System.out.println("You have exceeded the limit");
+
     }
 
     @Override

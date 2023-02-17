@@ -8,7 +8,7 @@ public class Main {
         CreditCard card3 = new CreditCard("BOND007", 1);
         card1.addAccountAmount(300);
         card2.addAccountAmount(1_000_000);
-        card3.withdrawAccountAmount(555);
+        card3.withdrawCash(1000);
         System.out.println(card1);
         System.out.println(card2);
         System.out.println(card3);
