@@ -13,11 +13,24 @@ public class Main {
         System.out.println(card2);
         System.out.println(card3);
         System.out.println();
+        System.out.println("                     ---------------------------------------");
+
+        ATMMachine machine = new ATMMachine(1, 3, 1);
+        machine.addCash(100, 1, 0);
+        System.out.println("Cash now - " + machine.sumCashATMMachine());
+        machine.withdrawCash(520);
         System.out.println();
-
-        ATMMachine machine = new ATMMachine(5, 5, 6);
-        machine.addCash(22, 12, 6);
-
+        System.out.println("Cash now - " + machine.sumCashATMMachine());
+        machine.withdrawCash(-20);
+        System.out.println();
+        System.out.println("Cash now - " + machine.sumCashATMMachine());
+        machine.withdrawCash(70);
+        System.out.println();
+        System.out.println("Cash now - " + machine.sumCashATMMachine());
+        machine.withdrawCash(6_000_000);
+        System.out.println();
+        System.out.println("Cash now - " + machine.sumCashATMMachine());
+        System.out.println("                     ---------------------------------------");
 
     }
 }
