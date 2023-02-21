@@ -1,0 +1,23 @@
+package homeworkSevenShapes;
+
+/*
+S=?R?
+P=2?R
+ */
+public class Circle extends Shape {
+    private int radius;
+
+    public Circle(int radius) {
+        this.radius = radius;
+    }
+
+    @Override
+    public int getAria() {
+        return (int) (Math.PI * Math.pow(this.radius, 2));
+    }
+
+    @Override
+    public int getPerimeter() {
+        return (int) (Math.PI * radius * 2);
+    }
+}
