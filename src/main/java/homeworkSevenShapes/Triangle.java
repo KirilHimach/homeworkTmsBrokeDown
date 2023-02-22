@@ -1,7 +1,7 @@
 package homeworkSevenShapes;
 
 /*
-S=?bh
+S=bh/2
 P=a+b+с  - формула Герона
  */
 public class Triangle extends Shape{
@@ -23,11 +23,11 @@ public class Triangle extends Shape{
 
     @Override
     public int getAria() {
-        return (this.sideB * this.sideH) / 2;
+        return (sideB * sideH) / 2;
     }
 
     @Override
     public int getPerimeter() {
-        return this.sideA + this.sideB + this.sideC;
+        return sideA + sideB + sideC;
     }
 }

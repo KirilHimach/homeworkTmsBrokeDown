@@ -15,7 +15,7 @@ public class Rectangle extends Shape {
 
     @Override
     public int getAria() {
-        return this.sideA * this.sideB;
+        return sideA * sideB;
     }
 
     @Override

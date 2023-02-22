@@ -1,8 +1,8 @@
 package homeworkSevenShapes;
 
 /*
-S=?R?
-P=2?R
+S=PiR2
+P=2PiR
  */
 public class Circle extends Shape {
     private int radius;
@@ -13,7 +13,7 @@ public class Circle extends Shape {
 
     @Override
     public int getAria() {
-        return (int) (Math.PI * Math.pow(this.radius, 2));
+        return (int) (Math.PI * Math.pow(radius, 2));
     }
 
     @Override
